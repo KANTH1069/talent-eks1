@@ -38,17 +38,7 @@ pipeline {
        }
        
     }
-    post{
-        
-        always{
-            emailext attachLog: true, body: '''Hi ,
-
-The jenkins job status.
-jenkins url: $BUILD_URL
-
-Thanks
-DevOps Team''', subject: 'Jenkins Build Status: $BUILD_NUMBER', to: 'malleshdevops2021@outlook.com'
-        }
+}
        
           
     }
